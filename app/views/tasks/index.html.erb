@@ -1,0 +1,10 @@
+<h1>My tasks</h1>
+
+<div class="my_tasks">
+  <% @tasks.each do |task| %>
+    <% completed = task.completed ? "fa-check-square" : "fa-square" %>
+    <p><i class="far <%= completed %>"></i>
+      <%= link_to task[:title], task_path(task) %>
+    </p>
+  <% end %>
+</div>
